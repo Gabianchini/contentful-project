@@ -9,12 +9,10 @@ var client = contentful.createClient({
   });
 
 
-export default function ProductPage({/*heading,subheading,*/authorImg, feedbackText,stars,authorName,companyText}){
+export default function ProductPage({authorImg, feedbackText,stars,authorName,companyText}){
 
     return (
     <div className={stylesProduct1.feedbackContainer}>
-   {/* <h1>{heading}</h1>
-    <h2>{subheading}</h2> */}
     <img className={stylesProduct1.stars} alt="stars" src={stars}/>
     <p className={stylesProduct1.feedbackText}>{feedbackText}</p>
     <div className={stylesProduct1.description}>
