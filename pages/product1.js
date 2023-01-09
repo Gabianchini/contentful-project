@@ -3,10 +3,11 @@ import stylesProduct1 from '../styles/Product1.module.css'
 import * as contentful from "contentful"
 console.log("contentful:", contentful)
 import Stars from '../components/atoms/Stars';
-import AuthorImg from '../components/atoms/AuthorImg';
+import Img from '../components/atoms/AuthorImg';
 import FeedbackText from '../components/atoms/FeedbackText';
 import AuthorName from '../components/atoms/AuthorName';
 import CompanyText from '../components/atoms/CompanyText';
+
 
 var client = contentful.createClient({
     space: process.env.CONTENTFUL_SPACE_ID,
@@ -34,10 +35,10 @@ export default function ProductPage({response}){
   response.map((item) => (
     <>
     <div className={stylesProduct1.feedbackContainer} >
-      <Stars className={stylesProduct1.stars} alt="stars" src={item.fields.stars.fields.file.url}/>
+      <Img className={stylesProduct1.stars} alt="stars" src={item.fields.stars.fields.file.url}/>
       <FeedbackText className={stylesProduct1.feedbackText}>{item.fields.avaliationText}</FeedbackText>
     <div className={stylesProduct1.description}>
-      <AuthorImg className={stylesProduct1.authorImg} alt="some alt text" src={item.fields.authorImg.fields.file.url}/>
+      <Img className={stylesProduct1.authorImg} alt="some alt text" src={item.fields.authorImg.fields.file.url}/>
       <AuthorName className={stylesProduct1.authorName}>{item.fields.authorName}</AuthorName>
       <CompanyText className={stylesProduct1.companyText}>{item.fields.companyText}</CompanyText>
     </div>
