@@ -1,7 +1,7 @@
 .feedbackText {
   font-size: 16px;
   color: rgba(57, 20, 0, 0.64);
-  padding-left: 1rem;
+  padding-left: 1.3rem;
 }
 
 .stars {
@@ -12,12 +12,13 @@
   font-style: Bold;
   font-size: 24px;
   font-family: arial, verdana;
+  margin-left:10px;
   
 }
 
 
 .companyText {
-
+margin:0;
  
  
 }
@@ -26,19 +27,21 @@
 
 .authorImg {
   float:left;
+  margin-right:10px;
   
 }
 
 
 .description {
+padding:0 0 0 15px;
+
 
  
 }
 
 
 .feedbackContainer {
-  width: 30%;
-  height: 10rem;
-  margin-left: 20px;
+margin-bottom:40px;
 }
+
 
