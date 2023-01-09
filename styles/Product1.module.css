@@ -13,14 +13,36 @@
   font-size: 24px;
   font-family: arial, verdana;
   margin-left:10px;
-  
+  position:relative;
+  top:18px;
+}
+@media(max-width:600px){
+  .authorName {
+    font-size:18px;
+    
+  }
+  @media(max-width:400px){
+    .authorName{
+      margin:5px 0 25px 10px;
+      
+      
+    }
+  }
 }
 
 
 .companyText {
 margin:0;
- 
- 
+padding:0;
+position:relative;
+bottom:10px;
+}
+ @media(max-width:600px){
+  .companyText {
+    font-size:14px;
+    bottom:-3px;
+    
+  }
 }
 
 
@@ -32,17 +54,37 @@ margin:0;
 }
 
 
+
 .description {
 padding:0 0 0 15px;
-
-
- 
+}
+@media(max-width:400px){
+  .description{
+    display:flex;
+    flex-direction:column;
+    align-items:baseline;
+  }
+  @media(max-width:400px){
+    .description{
+      align-items:center;
+      
+    }
+}
 }
 
 
 .feedbackContainer {
 margin-bottom:40px;
-max-width:30%;
+background-color:#1a6eff24;
+padding-bottom:30px;
 }
+@media (min-width:600px){
+.feedbackContainer{
+  max-width:60%;
+}
+}
+  
+
+
 
 

@@ -43,7 +43,7 @@ export default function ProductPage({response}){
       <CompanyText className={stylesProduct1.companyText}>{item.fields.companyText}</CompanyText>
     </div>
     </div>
-      <hr/>
+      
     </>
   ))
   )
