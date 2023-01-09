@@ -29,7 +29,7 @@ var client = contentful.createClient({
     }
 
 
-export default function Feedback({data}){
+export default function Avaliation({data}){
   
   return(
     
