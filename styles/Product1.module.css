@@ -1,14 +1,14 @@
-.feedbackText {
+.feedback__Text {
   font-size: 16px;
   color: rgba(57, 20, 0, 0.64);
   padding-left: 1.3rem;
 }
 
-.stars {
+.feedback__Stars {
   margin-top: 1.5rem;
   margin-left: 1rem;
 }
-.authorName {
+.feedback__authorName {
   font-style: Bold;
   font-size: 24px;
   font-family: arial, verdana;
@@ -17,12 +17,12 @@
   top:18px;
 }
 @media(max-width:600px){
-  .authorName {
+  .feedback__authorName {
     font-size:18px;
     
   }
   @media(max-width:400px){
-    .authorName{
+    .feedback__authorName{
       margin:5px 0 25px 10px;
       
       
@@ -31,14 +31,14 @@
 }
 
 
-.companyText {
+.feedback__companyText {
 margin:0;
 padding:0;
 position:relative;
 bottom:10px;
 }
  @media(max-width:600px){
-  .companyText {
+  .feedback__companyTex{
     font-size:14px;
     bottom:-3px;
     
@@ -47,7 +47,7 @@ bottom:10px;
 
 
 
-.authorImg {
+.feedback__authorImg {
   float:left;
   margin-right:10px;
   
@@ -55,17 +55,17 @@ bottom:10px;
 
 
 
-.description {
+.feedback__description {
 padding:0 0 0 15px;
 }
 @media(max-width:400px){
-  .description{
+  .feedback__description{
     display:flex;
     flex-direction:column;
     align-items:baseline;
   }
   @media(max-width:400px){
-    .description{
+    .feedback__description{
       align-items:center;
       
     }
@@ -73,13 +73,13 @@ padding:0 0 0 15px;
 }
 
 
-.feedbackContainer {
+.feedback__Container {
 margin-bottom:40px;
 background-color:#1a6eff24;
 padding-bottom:30px;
 }
 @media (min-width:600px){
-.feedbackContainer{
+.feedback__Container{
   max-width:60%;
 }
 }

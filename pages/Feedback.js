@@ -21,7 +21,7 @@ var client = contentful.createClient({
 
     return{
             props:{
-                response:feedback.items
+                data:feedback.items
             }
            
         }
@@ -29,18 +29,19 @@ var client = contentful.createClient({
     }
 
 
-export default function ProductPage({response}){
+export default function Feedback({data}){
   
   return(
-  response.map((item) => (
+    
+  data.map((item) => (
     <>
-    <div className={stylesProduct1.feedbackContainer} >
-      <Img className={stylesProduct1.stars} alt="stars" src={item.fields.stars.fields.file.url}/>
-      <FeedbackText className={stylesProduct1.feedbackText}>{item.fields.avaliationText}</FeedbackText>
-    <div className={stylesProduct1.description}>
-      <Img className={stylesProduct1.authorImg} alt="some alt text" src={item.fields.authorImg.fields.file.url}/>
-      <AuthorName className={stylesProduct1.authorName}>{item.fields.authorName}</AuthorName>
-      <CompanyText className={stylesProduct1.companyText}>{item.fields.companyText}</CompanyText>
+    <div className={stylesProduct1.feedback__Container} key={item.fields.authorName} >
+      <Img className={stylesProduct1.feedback__Stars} alt="stars" src={item.fields.stars.fields.file.url}/>
+      <FeedbackText className={stylesProduct1.feedback__Text}>{item.fields.avaliationText}</FeedbackText>
+    <div className={stylesProduct1.feedback__description}>
+      <Img className={stylesProduct1.feedback__authorImg} alt="some alt text" src={item.fields.authorImg.fields.file.url}/>
+      <AuthorName className={stylesProduct1.feedback__authorName}>{item.fields.authorName}</AuthorName>
+      <CompanyText className={stylesProduct1.feedback__companyText}>{item.fields.companyText}</CompanyText>
     </div>
     </div>
       
