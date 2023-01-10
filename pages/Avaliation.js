@@ -2,11 +2,10 @@ import stylesProduct1 from '../styles/Product1.module.css'
 //var contentful = require("contentful") // outra forma de importação 
 import * as contentful from "contentful"
 console.log("contentful:", contentful)
-import Stars from '../components/atoms/Stars';
-import Img from '../components/atoms/AuthorImg';
-import FeedbackText from '../components/atoms/FeedbackText';
-import AuthorName from '../components/atoms/AuthorName';
-import CompanyText from '../components/atoms/CompanyText';
+import Img from '../components/atoms/Img';
+import Text from '../components/atoms/Text';
+import Title from '../components/atoms/Title';
+import Subtitle from '../components/atoms/Subtitle';
 
 
 var client = contentful.createClient({
@@ -37,11 +36,11 @@ export default function Feedback({data}){
     <>
     <div className={stylesProduct1.feedback__Container} key={item.fields.authorName} >
       <Img className={stylesProduct1.feedback__Stars} alt="stars" src={item.fields.stars.fields.file.url}/>
-      <FeedbackText className={stylesProduct1.feedback__Text}>{item.fields.avaliationText}</FeedbackText>
+      <Text className={stylesProduct1.feedback__Text}>{item.fields.avaliationText}</Text>
     <div className={stylesProduct1.feedback__description}>
       <Img className={stylesProduct1.feedback__authorImg} alt="some alt text" src={item.fields.authorImg.fields.file.url}/>
-      <AuthorName className={stylesProduct1.feedback__authorName}>{item.fields.authorName}</AuthorName>
-      <CompanyText className={stylesProduct1.feedback__companyText}>{item.fields.companyText}</CompanyText>
+      <Title className={stylesProduct1.feedback__authorName}>{item.fields.authorName}</Title>
+      <Subtitle className={stylesProduct1.feedback__companyText}>{item.fields.companyText}</Subtitle>
     </div>
     </div>
       

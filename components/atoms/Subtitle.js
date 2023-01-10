@@ -1,4 +1,4 @@
-export default function CompanyText({className,children}){
+export default function Subtitle({className,children}){
     return(
     <p className={className}>{children}</p>
     )
