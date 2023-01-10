@@ -1,3 +1,6 @@
+import Title from '../components/atoms/Title'
+
+
 export default{
     title:"atoms/Title",
     component:Title,

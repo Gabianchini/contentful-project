@@ -1,5 +1,4 @@
-import React from "react";
-import FeedbackText from "../components/atoms/Text";
+import Text from "../components/atoms/Text";
 
 
 export default{
@@ -8,7 +7,7 @@ export default{
 
     args: {
         className: "feedback__Text",
-        children: "FeedbackText",
+        children: "Text",
     }
 };
 
