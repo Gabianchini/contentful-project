@@ -1,4 +1,4 @@
-import stylesProduct1 from '../styles/Product1.module.css'
+import stylesProduct1 from '../styles/Product1.module.scss'
 //var contentful = require("contentful") // outra forma de importação 
 import * as contentful from "contentful"
 console.log("contentful:", contentful)
@@ -6,6 +6,11 @@ import Img from '../components/atoms/Img';
 import Text from '../components/atoms/Text';
 import Title from '../components/atoms/Title';
 import Subtitle from '../components/atoms/Subtitle';
+import { Epilogue } from '@next/font/google';
+
+const epilogue = Epilogue({ subsets: ['latin'] });
+
+
 
 
 var client = contentful.createClient({
@@ -33,8 +38,8 @@ export default function Feedback({data}){
   return(
     
   data.map((item) => (
-    <>
-    <div className={stylesProduct1.feedback__Container} key={item.fields.authorName} >
+    <div className={epilogue.className} key={item.fields.authorName}>
+    <div className={stylesProduct1.feedback__Container} >
       <Img className={stylesProduct1.feedback__Stars} alt="stars" src={item.fields.stars.fields.file.url}/>
       <Text className={stylesProduct1.feedback__Text}>{item.fields.avaliationText}</Text>
     <div className={stylesProduct1.feedback__description}>
@@ -44,7 +49,7 @@ export default function Feedback({data}){
     </div>
     </div>
       
-    </>
+    </div>
   ))
   )
   }
