@@ -1,4 +1,4 @@
-import stylesProduct1 from '../styles/Product1.module.scss'
+import stylesProduct1 from '../styles/Product1.module.css'
 //var contentful = require("contentful") // outra forma de importação 
 import * as contentful from "contentful"
 console.log("contentful:", contentful)

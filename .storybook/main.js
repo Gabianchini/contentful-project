@@ -4,10 +4,7 @@ module.exports = {
   stories: [
     "../stories/**/*.stories.mdx",
     "../stories/**/*.stories.@(js|jsx|ts|tsx)",
-    "../pages/**/*.stories.mdx",
-    "../pages/**/*.stories.@(js|jsx|ts|tsx)",
-    "../layout/**/*.stories.mdx",
-    "../layout/**/*.stories.@(js|jsx|ts|tsx)",
+    
   ],
   addons: [
     "@storybook/addon-links",
@@ -26,12 +23,10 @@ module.exports = {
     config.module.rules.push({
       test: /\.scss$/,
       use: ["style-loader", "css-loader", "sass-loader"],
-      options: {
-        modules: {
-          auto: true,
-          localIdentName: '[name]__[local]--[hash:base64:5]',
-        },
-      },
+     
+        
+    },
+    {
       include: path.resolve(__dirname, "../"),
     });
     // config.resolve.plugins = config.resolve.plugins || [];
